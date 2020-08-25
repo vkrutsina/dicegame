@@ -12,6 +12,28 @@ let rollButton = document.getElementById('rollBtn');
 let resetButton = document.getElementById('resetBtn');
 let message = document.getElementById('message');
 
+const buttonChange = () => {
+  rollButton.style.display = 'none';
+  resetButton.style.display = 'block';
+  resetButton.style.margin = '40px auto';
+};
+
+const resetGame = () => {
+  message.textContent = 'Player 1 Turn!';
+  player1Turn = true;
+  resetButton.style.display = 'none';
+  rollButton.style.display = 'block';
+  rollButton.style.margin = '40px auto';
+  player1Score = 0;
+  player2Score = 0;
+  player1Scoreboard.textContent = player1Score;
+  player2Scoreboard.textContent = player2Score;
+  player1Dice.textContent = '-';
+  player2Dice.textContent = '-';
+  player2Dice.classList.remove('active');
+  player1Dice.classList.add('active');
+};
+
 rollButton.addEventListener('click', function () {
   const randomNum = Math.floor(Math.random() * 6) + 1;
   if (player1Turn) {
@@ -29,5 +51,15 @@ rollButton.addEventListener('click', function () {
     player2Dice.classList.remove('active');
     player1Dice.classList.add('active');
   }
+  if (player1Score >= 20) {
+    message.textContent = 'Player 1 Won!';
+    buttonChange();
+  } else if (player2Score >= 20) {
+    message.textContent = 'Player 2 Won!';
+    buttonChange();
+  }
+
+  resetButton.addEventListener('click', resetGame);
+
   player1Turn = !player1Turn;
 });
