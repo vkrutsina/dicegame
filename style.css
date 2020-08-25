@@ -1,10 +1,10 @@
 html,
 body {
-  --color-1: #a8e6cf;
-  --color-2: #dcedc1;
-  --color-3: #ffd3b6;
-  --color-4: #ffaaa5;
-  --color-5: #ff8b94;
+  --color-1: #ffba49;
+  --color-2: #20a39e;
+  --color-3: #ef5b5b;
+  --color-4: #23001e;
+  --color-5: #a4a9ad;
   margin: 0;
   padding: 0;
 }
@@ -22,8 +22,9 @@ body {
   text-align: center;
   margin: 0 auto;
   background-color: white;
-  box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.3);
   padding: 50px;
+  border-radius: 24px;
 }
 
 .players {
@@ -33,10 +34,10 @@ body {
 }
 
 .dice {
-  border-radius: 10px;
+  border-radius: 12px;
   width: 100px;
   height: 100px;
-  background-color: var(--color-3);
+  background-color: rgba(32, 163, 158, 0.7);
   margin: 0 auto;
   font-size: 80px;
   display: flex;
@@ -50,12 +51,12 @@ button {
   font-size: 20px;
   margin-top: 40px;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   cursor: pointer;
 }
 
 #rollBtn {
-  background-color: var(--color-5);
+  background-color: var(--color-3);
 }
 
 #resetBtn {

@@ -19,7 +19,7 @@ const buttonChange = () => {
 };
 
 const resetGame = () => {
-  message.textContent = 'Player 1 Turn!';
+  message.textContent = 'Player 1 Turn';
   player1Turn = true;
   resetButton.style.display = 'none';
   rollButton.style.display = 'block';
